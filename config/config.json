@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "Zaenal@123#",
+    "database": "task_backend",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "Zaenal@123#",
+    "database": "task_backend_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "Zaenal@123#",
+    "database": "task_backend_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
