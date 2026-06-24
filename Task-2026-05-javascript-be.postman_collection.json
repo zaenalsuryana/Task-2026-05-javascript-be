@@ -1,0 +1,30 @@
+{
+	"info": {
+		"_postman_id": "d7070cd0-d287-4397-9777-9748e3a64b7f",
+		"name": "User API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "51014869",
+		"_collection_link": "https://zaenalsuryana7-8967490.postman.co/workspace/zaenal's-Workspace~17453413-d9c6-4c22-8eab-9b3851fd2f5e/collection/51014869-d7070cd0-d287-4397-9777-9748e3a64b7f?action=share&source=collection_link&creator=51014869"
+	},
+	"item": [
+		{
+			"name": "All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
