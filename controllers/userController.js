@@ -30,8 +30,24 @@ const createUser = async (req, res) =>{
     try {
         const { name,email } = req.body;
 
-        if(!name || !email){
-            return res.status(400).json({message: "Name dan email wajib diisi",
+        if(!name && !email){
+            return res.status(400).json({ message: "Name dan Email wajib diisi",
+            });
+        }
+
+        if(!name){
+            return res.status(400).json({ message: "Name wajib diisi",
+            });
+        }
+
+        if(!email){
+            return res.status(400).json({message: "Email wajib diisi",
+            });
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            return res.status(400).json({ message: "Format email tidak valid", 
             });
         }
         const user = await User.create({
@@ -47,10 +63,29 @@ const createUser = async (req, res) =>{
 const updateUser = async (req, res) => {
     try {
         const { name, email } = req.body;
-
-        if (!name || !email) {
+        
+        if (!name && !email) {
             return res.status(400).json({
-                message: "Name dan email wajib diisi",
+                message: "Name dan Email wajib diisi",
+            });
+        }
+
+        if (!name) {
+            return res.status(400).json({
+                message: "Name wajib diisi",
+            });
+        }
+
+        if (!email) {
+            return res.status(400).json({
+                message: "Email wajib diisi",
+            });
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            return res.status(400).json({
+                message: "Format email tidak valid",
             });
         }
 

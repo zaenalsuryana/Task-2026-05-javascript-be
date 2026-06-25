@@ -64,7 +64,7 @@ router.get("/:id", getUserById);
  *       201:
  *         description: User berhasil ditambahkan
  *       400:
- *         description: Name dan email wajib diisi
+ *         description: Validasi gagal (name/email wajib diisi atau format email tidak valid)
  */
 router.post("/", createUser);
 /**
@@ -95,7 +95,7 @@ router.post("/", createUser);
  *       200:
  *         description: User berhasil diupdate
  *       400:
- *         description: Name dan email wajib diisi
+ *         description: Validasi gagal (name/email wajib diisi atau format email tidak valid)
  *       404:
  *         description: User tidak ditemukan
  */
